@@ -1,0 +1,158 @@
+.navbar {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+      padding: 0.85rem 0;
+      transition: all 0.3s cubic-bezier(0.2, 0, 0, 1);
+      border-bottom: 1px solid rgba(67, 97, 238, 0.08);
+    }
+
+    /* Navbar scroll effect (optional JS adds class) */
+    .navbar.scrolled {
+      padding: 0.5rem 0;
+      background: rgba(255, 255, 255, 0.98);
+      box-shadow: 0 12px 34px rgba(0, 0, 0, 0.08);
+    }
+
+    /* Brand logo with gradient */
+    .navbar-brand {
+      font-weight: 800;
+      font-size: 1.9rem;
+      letter-spacing: -0.02em;
+      background: linear-gradient(125deg, #1e293b 0%, #4361ee 45%, #4cc9f0 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      transition: transform 0.2s ease;
+      position: relative;
+    }
+    .navbar-brand:hover {
+      transform: scale(1.02);
+    }
+
+    /* Nav links - modern with underline effect */
+    .navbar-nav .nav-link {
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: #1e293b;
+      margin: 0 0.3rem;
+      padding: 0.6rem 1rem;
+      position: relative;
+      transition: all 0.25s ease;
+      border-radius: 40px;
+    }
+
+    /* Hover background effect */
+    .navbar-nav .nav-link:hover {
+      color: #4361ee;
+      background: rgba(67, 97, 238, 0.06);
+    }
+
+    /* Active link style - pill background */
+    .navbar-nav .nav-link.active {
+      color: #4361ee;
+      background: rgba(67, 97, 238, 0.12);
+      font-weight: 700;
+    }
+
+    /* Animated indicator line (optional) */
+    .navbar-nav .nav-link::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%) scaleX(0);
+      width: 70%;
+      height: 3px;
+      background: linear-gradient(90deg, #4361ee, #4cc9f0);
+      border-radius: 4px;
+      transition: transform 0.25s ease;
+      transform-origin: center;
+    }
+
+    .navbar-nav .nav-link:hover::before,
+    .navbar-nav .nav-link.active::before {
+      transform: translateX(-50%) scaleX(1);
+    }
+
+    /* CTA Button - Premium Gradient */
+    .btn-nav-cta {
+      background: linear-gradient(95deg, #4361ee, #3a0ca3);
+      border: none;
+      color: white;
+      font-weight: 600;
+      padding: 0.6rem 1.6rem;
+      border-radius: 40px;
+      font-size: 0.9rem;
+      transition: all 0.3s;
+      box-shadow: 0 4px 10px rgba(67, 97, 238, 0.2);
+      letter-spacing: 0.2px;
+    }
+    .btn-nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 22px rgba(67, 97, 238, 0.3);
+      background: linear-gradient(95deg, #3a0ca3, #4361ee);
+      color: white;
+    }
+
+    /* Dropdown menu modern styling (if needed) */
+    .dropdown-menu {
+      border: none;
+      border-radius: 20px;
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.12);
+      padding: 0.7rem 0;
+      margin-top: 0.6rem;
+      backdrop-filter: blur(10px);
+      background: rgba(255, 255, 255, 0.96);
+      border: 1px solid rgba(67, 97, 238, 0.15);
+    }
+    .dropdown-item {
+      font-weight: 500;
+      padding: 0.55rem 1.6rem;
+      transition: 0.2s;
+    }
+    .dropdown-item:hover {
+      background: rgba(67, 97, 238, 0.08);
+      color: #4361ee;
+      padding-left: 1.9rem;
+    }
+
+    /* Toggler icon custom */
+    .navbar-toggler {
+      border: none;
+      padding: 0.5rem;
+      border-radius: 12px;
+      background: rgba(67, 97, 238, 0.05);
+    }
+    .navbar-toggler:focus {
+      box-shadow: none;
+      outline: none;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(67, 97, 238, 0.9)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991px) {
+      .navbar-nav {
+        padding: 1rem 0;
+      }
+      .navbar-nav .nav-link {
+        display: inline-block;
+        width: fit-content;
+        margin: 0.2rem 0;
+      }
+      .btn-nav-cta {
+        margin-top: 0.5rem;
+        width: fit-content;
+      }
+      .navbar-nav .nav-link::before {
+        bottom: -2px;
+      }
+    }
+
+    /* floating animation optional */
+    @keyframes subtleGlow {
+      0% { box-shadow: 0 4px 10px rgba(67, 97, 238, 0.15);}
+      100% { box-shadow: 0 6px 18px rgba(67, 97, 238, 0.25);}
+    }

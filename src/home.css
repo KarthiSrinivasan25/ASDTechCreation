@@ -1,0 +1,359 @@
+
+    .carousel-item {
+      height: 90vh;
+      min-height: 600px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+    }
+    .carousel-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.3) 100%);
+      z-index: 1;
+    }
+    .carousel-caption {
+      z-index: 2;
+      bottom: 30%;
+      text-align: left;
+      left: 8%;
+      right: auto;
+      top: auto;
+      transform: translateY(20%);
+      max-width: 650px;
+    }
+    .carousel-caption h1 {
+      font-size: 3.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      margin-bottom: 1.2rem;
+      text-shadow: 0 2px 15px rgba(0,0,0,0.3);
+    }
+    .carousel-caption p {
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      opacity: 0.95;
+    }
+    .carousel-btn {
+      background: linear-gradient(95deg, #4361ee, #3a0ca3);
+      border: none;
+      padding: 12px 32px;
+      border-radius: 50px;
+      font-weight: 600;
+      color: white;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .carousel-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+      background: linear-gradient(95deg, #3a0ca3, #4361ee);
+      color: white;
+    }
+    .carousel-control-prev, .carousel-control-next {
+      width: 5%;
+      opacity: 0.7;
+    }
+    .carousel-indicators button {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin: 0 6px;
+    }
+   
+
+
+    /* ========== ADVANCED ABOUT SECTION WITH ADVANCED IMAGE DESIGN ========== */
+    .about-advanced {
+      padding: 80px 0 30px;
+      background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .about-advanced::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(67,97,238,0.05) 0%, rgba(76,201,240,0) 70%);
+      border-radius: 50%;
+      z-index: 0;
+    }
+    .about-badge {
+      display: inline-block;
+      background: rgba(67, 97, 238, 0.12);
+      color: #4361ee;
+      font-weight: 700;
+      padding: 6px 18px;
+      border-radius: 40px;
+      font-size: 0.85rem;
+      letter-spacing: 0.3px;
+      margin-bottom: 1.2rem;
+      backdrop-filter: blur(2px);
+    }
+    .about-title {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #1e293b, #4361ee);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.01em;
+    }
+    .about-description {
+      color: #334155;
+      line-height: 1.7;
+      font-size: 1.05rem;
+      margin-bottom: 1.8rem;
+    }
+    
+    /* Team / culture chips */
+    .culture-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(67, 97, 238, 0.06);
+      padding: 8px 18px;
+      border-radius: 60px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #1e293b;
+      margin-right: 12px;
+      margin-bottom: 12px;
+      transition: 0.2s;
+    }
+    .culture-tag i {
+      color: #4361ee;
+      font-size: 0.9rem;
+    }
+    .culture-tag:hover {
+      background: rgba(67, 97, 238, 0.15);
+      transform: translateX(3px);
+    }
+
+    /* ========== ADVANCED IMAGE DESIGN WITH OVERLAYS AND EFFECTS ========== */
+    .about-image-wrapper {
+      position: relative;
+      border-radius: 40px;
+      overflow: hidden;
+      box-shadow: 0 30px 50px -20px rgba(0,0,0,0.25);
+      transition: all 0.4s ease;
+    }
+    .about-image-wrapper:hover {
+      transform: scale(1.01);
+      box-shadow: 0 35px 55px -20px rgba(67,97,238,0.3);
+    }
+    .about-image-wrapper img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+    .about-image-wrapper:hover img {
+      transform: scale(1.05);
+    }
+    
+    /* Gradient overlay on image */
+    .image-gradient-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 50%;
+      background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0) 100%);
+      pointer-events: none;
+      z-index: 1;
+    }
+    
+    /* Floating badge on image */
+    .image-floating-badge {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      background: rgba(255,255,255,0.95);
+      backdrop-filter: blur(10px);
+      padding: 10px 20px;
+      border-radius: 60px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      color: #1e293b;
+      z-index: 2;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      border-left: 3px solid #4361ee;
+      transition: all 0.3s;
+    }
+    .image-floating-badge i {
+      color: #4361ee;
+      margin-right: 8px;
+    }
+    .about-image-wrapper:hover .image-floating-badge {
+      transform: translateX(5px);
+      background: white;
+    }
+    
+    /* Top right decorative icon */
+    .image-decorative-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 50px;
+      height: 50px;
+      background: rgba(67,97,238,0.2);
+      backdrop-filter: blur(8px);
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      font-size: 1.5rem;
+      color: white;
+      transition: all 0.3s;
+    }
+    .about-image-wrapper:hover .image-decorative-icon {
+      background: #4361ee;
+      transform: rotate(10deg) scale(1.05);
+    }
+    
+    
+    .services-preview {
+   padding: 40px 0 30px;
+      background: #fbffef;
+    }
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .section-badge {
+      display: inline-block;
+      background: rgba(67, 97, 238, 0.1);
+      color: #4361ee;
+      font-weight: 600;
+      padding: 5px 16px;
+      border-radius: 40px;
+      font-size: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    .section-title {
+      font-size: 2.5rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, #1e293b, #4361ee);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      margin-bottom: 1rem;
+    }
+    .service-card {
+      background: #ffffff;
+      border-radius: 28px;
+      padding: 2rem 1.5rem;
+      transition: all 0.3s ease;
+      box-shadow: 0 12px 28px -8px rgba(0, 0, 0, 0.05);
+      border: 1px solid rgba(67, 97, 238, 0.08);
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #4361ee, #4cc9f0);
+      transform: scaleX(0);
+      transition: transform 0.4s ease;
+      transform-origin: left;
+    }
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 40px -12px rgba(67, 97, 238, 0.2);
+      border-color: rgba(67, 97, 238, 0.2);
+    }
+    
+    /* ROTATING ICON ANIMATION */
+    .service-icon {
+      width: 65px;
+      height: 65px;
+      background: linear-gradient(135deg, rgba(67,97,238,0.1), rgba(76,201,240,0.1));
+      border-radius: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    .service-icon i {
+      font-size: 2rem;
+      background: linear-gradient(135deg, #4361ee, #4cc9f0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-block;
+    }
+    /* Rotate icon on card hover */
+    .service-card:hover .service-icon i {
+      transform: rotate(15deg) scale(1.1);
+    }
+    /* Alternative: continuous subtle rotation on hover */
+    .service-card:hover .service-icon {
+      background: linear-gradient(135deg, rgba(67,97,238,0.15), rgba(76,201,240,0.15));
+    }
+    
+    .service-card h4 {
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #1e293b;
+    }
+    .service-card p {
+      color: #64748b;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      margin-bottom: 1.2rem;
+    }
+    .service-link {
+      color: #4361ee;
+      font-weight: 600;
+      font-size: 0.85rem;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: gap 0.2s;
+    }
+    .service-link:hover {
+      gap: 10px;
+      color: #3a0ca3;
+    }
+
+
+     @media (max-width: 768px) {
+      .carousel-caption {
+        bottom: 20%;
+        left: 5%;
+        right: 5%;
+        text-align: center;
+      }
+      .carousel-caption h1 {
+        font-size: 2.2rem;
+      }
+      .carousel-item {
+        height: 40vh;
+      }
+
+      .about-title, .section-title { font-size: 2rem; }
+      .service-card { padding: 1.5rem; }
+      
+    }
