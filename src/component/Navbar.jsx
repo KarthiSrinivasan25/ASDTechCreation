@@ -1,64 +1,136 @@
-import './Navbar.css';
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
 function Navbar() {
-    return(
-        <nav className="navbar navbar-expand-lg sticky-top" id="mainNavbar">
-  <div className="container">
-    
-   <a className="navbar-brand d-flex align-items-center" href="#">
-  <img
-    src="/logo.jpg"
-    alt="ASDTech-Creation Logo"
-    style={{ height: "50px", width: "auto", marginRight: "10px" }}
-  />
-</a>
+  return (
+    <nav className="navbar navbar-expand-lg sticky-top" id="mainNavbar">
+      <div className="container">
 
-    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#advancedNavbar" aria-controls="advancedNavbar" aria-expanded="false" aria-label="Toggle navigation">
-      <span className="navbar-toggler-icon"></span>
-    </button>
+        {/* Logo */}
+        <Link className="navbar-brand d-flex align-items-center" to="/">
+          <img
+            src="/asd_logo.png"
+            alt="ASDTech-Creation Logo"
+            style={{
+              height: "60px",
+              width: "auto",
+              marginRight: "10px",
+            }}
+          />
+        </Link>
 
-   
-    <div className="collapse navbar-collapse" id="advancedNavbar">
-      <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <a className="nav-link active" aria-current="page" href="#">Home</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">About</a>
-        </li>
-        <li className="nav-item dropdown">
-          <a className="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Services
-          </a>
-          <ul className="dropdown-menu" aria-labelledby="servicesDropdown">
-            <li><a className="dropdown-item" href="#">Web Development</a></li>
-            <li><a className="dropdown-item" href="#">Mobile Apps</a></li>
-            <li><a className="dropdown-item" href="#">UI/UX Design</a></li>
-            <li><hr className="dropdown-divider" /></li>
-            <li><a className="dropdown-item" href="#">Cloud Solutions</a></li>
+        {/* Mobile Toggle */}
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#advancedNavbar"
+          aria-controls="advancedNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+
+        <div className="collapse navbar-collapse" id="advancedNavbar">
+          <ul className="navbar-nav mx-auto mb-2 mb-lg-0">
+
+            <li className="nav-item">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                to="/"
+              >
+                Home
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/about">
+                About
+              </Link>
+            </li>
+
+            {/* Dropdown */}
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="/"
+                id="servicesDropdown"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+                onClick={(e) => e.preventDefault()}
+              >
+                Services
+              </a>
+
+              <ul
+                className="dropdown-menu"
+                aria-labelledby="servicesDropdown"
+              >
+                <li>
+                  <Link className="dropdown-item" to="/web-development">
+                    Web Development
+                  </Link>
+                </li>
+
+                <li>
+                  <Link className="dropdown-item" to="/mobile-apps">
+                    Mobile Apps
+                  </Link>
+                </li>
+
+                <li>
+                  <Link className="dropdown-item" to="/ui-ux-design">
+                    UI/UX Design
+                  </Link>
+                </li>
+
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+
+                <li>
+                  <Link className="dropdown-item" to="/cloud-solutions">
+                    Cloud Solutions
+                  </Link>
+                </li>
+              </ul>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/portfolio">
+                Portfolio
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/career">
+                Career
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link className="nav-link" to="/contact">
+                Contact
+              </Link>
+            </li>
+
           </ul>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Portfolio</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Career</a>
-        </li>
-        <li className="nav-item">
-          <a className="nav-link" href="#">Contact</a>
-        </li>
-      </ul>
-      
-   
-      <div className="d-flex">
-        <a href="#" className="btn btn-nav-cta">
-          <i className="fas fa-rocket me-2"></i> Get In Touch
-        </a>
+
+          {/* CTA Button */}
+          <div className="d-flex">
+            <Link to="/contact" className="btn btn-nav-cta">
+              <i className="fas fa-rocket me-2"></i>
+              Get In Touch
+            </Link>
+          </div>
+
+        </div>
       </div>
-    </div>
-  </div>
-</nav>
-    )
+    </nav>
+  );
 }
 
-    export default Navbar
+export default Navbar;
