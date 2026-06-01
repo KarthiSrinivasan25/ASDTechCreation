@@ -2,7 +2,7 @@
     .breadcrumb-advanced-section {
       
       padding: 18px 0;
-      background: linear-gradient(rgba(10, 15, 28, 0.88), rgba(10, 15, 28, 0.92)), url('https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1600&h=300&fit=crop');
+      background:  url('./bread1.jpg');
       background-size: cover;
       background-position: center;
       position: relative;
