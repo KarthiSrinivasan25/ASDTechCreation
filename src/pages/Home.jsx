@@ -25,7 +25,7 @@ function Home() {
                                 "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('/home1.png')"
                         }}
                     >
-                        <div className="carousel-caption">
+                        <div className="carousel-caption p-5">
                             <h1>Innovative Web Solutions</h1>
                             <p>
                                 Custom web applications, enterprise platforms, and scalable digital ecosystems built with modern frameworks.
@@ -38,7 +38,7 @@ function Home() {
                     </div>
 
                     <div className="carousel-item" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('/home2.png')" }}>
-                        <div className="carousel-caption">
+                        <div className="carousel-caption p-5">
                             <h1>Mobile App Development</h1>
                             <p>We build high-performance Android and iOS apps with intuitive UI, seamless UX, and scalable architecture.</p>
                             <a href="#" className="carousel-btn">Explore Apps <i className="fas fa-arrow-right ms-2"></i></a>
