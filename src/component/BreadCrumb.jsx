@@ -1,6 +1,6 @@
 import './BreadCrumb.css'
 
-function BreadCrumb(){
+function BreadCrumb(props){
     return(
         <section className="breadcrumb-advanced-section">
     <div className="breadcrumb-particles" id="breadcrumbParticles"></div>
@@ -20,11 +20,11 @@ function BreadCrumb(){
           </div>
           <span className="breadcrumb-separator"><i className="fas fa-chevron-right"></i></span>
           <div className="breadcrumb-item active">
-            <i className="fas fa-info-circle"></i> About Us
+            <i className="fas fa-info-circle"></i> {props.pageName}
           </div>
         </div>
         <div className="page-title">
-          <i className="fas fa-info-circle color-white"></i> About CodeStack
+          <i className="fas fa-info-circle color-white"></i> {props.pageName} ASDTech Creation
         </div>
       </div>
     </div>

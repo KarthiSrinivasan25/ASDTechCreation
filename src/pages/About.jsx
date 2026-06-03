@@ -24,7 +24,7 @@ function About() {
 
 
     <>
-      <BreadCrumb />
+      <BreadCrumb pageName="About"/>
 
       <section className="hero-ring">
         <div className="container">
