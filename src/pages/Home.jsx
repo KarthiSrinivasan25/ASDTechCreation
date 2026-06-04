@@ -483,7 +483,11 @@ function Home() {
   <Testinomial />
 
 
-  <Cta />
+  <Cta badgeTitle="Limited Time Offer" prefix="Ready to" highlight="Transform" suffix="Your Business?"  
+            description="Join 500+ successful businesses. Get a free consultation and quote today!"
+            button1="Start Project" button2="Free Consultation" 
+            trust1="No upfront payment" trust2="100% Satisfaction" trust3="24/7 Support" />
+            
 
   <ClientBrand />
 

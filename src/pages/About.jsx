@@ -167,7 +167,9 @@ function About() {
 
       <OurTeam />
 
-      <Cta />
+      <Cta badgeTitle="Let’s Build Together" prefix="Have a" highlight="Project" suffix="in Mind?"  
+            description="We turn your ideas into fast, modern, and scalable websites that help your business grow online."
+            button2="Schedule a Free Consultation" />
     </>
 
 

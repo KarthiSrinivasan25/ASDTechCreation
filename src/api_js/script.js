@@ -1,3 +1,4 @@
+import { Modal } from "bootstrap";
 window.addEventListener("load", () => {
 
   const counters = document.querySelectorAll('.counter');
