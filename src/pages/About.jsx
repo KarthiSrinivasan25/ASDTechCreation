@@ -94,7 +94,7 @@ function About() {
               <span className="story-badge"><i className="fas fa-book-open me-1"></i> Our Story</span>
               <h2 className="story-title">Crafting Exceptional Apps<br />Since 2020</h2>
               <div className="story-subtitle">From a Small Team to a Global App Development Powerhouse</div>
-              <p className="story-text">What started as two developers coding in a small apartment has evolved into CodeStack — a leading web and mobile app development agency serving clients across 20+ countries. Our journey began with a simple belief: <strong>great apps solve real problems</strong>.</p>
+              <p className="story-text">What started as two developers coding in a small apartment has evolved into ASDTech Creation — a leading web and mobile app development agency serving clients across 20+ countries. Our journey began with a simple belief: <strong>great apps solve real problems</strong>.</p>
               <p className="story-text">Over the years, we've had the privilege of launching 250+ successful apps for startups, enterprises, and everything in between. From iOS and Android native apps to cross-platform solutions and powerful web applications, each project pushed us to innovate and excel.</p>
             </div>
           </div>

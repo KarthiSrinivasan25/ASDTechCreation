@@ -1,4 +1,5 @@
 import BreadCrumb from '../component/BreadCrumb'
+import Hero from '../component/Hero'
 import Cta from '../component/Cta'
 import JobApplySection from '../component/JobApplySection'
 import JobSection from '../component/JobSection'
@@ -11,14 +12,10 @@ function Career() {
         <>
             <BreadCrumb pageName="Career" />
 
-            <section className="career-hero">
-                <div className="container text-center">
-                    <div className="hero-badge"><i className="fas fa-rocket me-2"></i> We're Hiring!</div>
-                    <h1>Join Our <span>Dream Team</span><br />Build the Future</h1>
-                    <p>Build your career with CodeStack. We're looking for passionate individuals who love technology and innovation.</p>
-                </div>
-            </section>
 
+            <Hero HeroTitlePrefix="Join Our Dream Team" HeroTitleSuffix="Build the Future" HeroDescription="Build your career with ASDTech Creation. We're looking for passionate individuals who love technology and innovation."/>
+        
+         
 
 
             <section className="why-join">

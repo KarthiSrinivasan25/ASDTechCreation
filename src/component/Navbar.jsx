@@ -53,22 +53,28 @@ function Navbar() {
 
             {/* Dropdown */}
             <li className="nav-item dropdown">
-              <a
+              <span
                 className="nav-link dropdown-toggle"
-                href="/"
-                id="servicesDropdown"
                 role="button"
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
-                onClick={(e) => e.preventDefault()}
+                style={{ cursor: "pointer" }}
               >
                 Services
-              </a>
+              </span>
 
-              <ul
-                className="dropdown-menu"
-                aria-labelledby="servicesDropdown"
-              >
+              <ul className="dropdown-menu">
+
+                {/* Main Services Page */}
+                <li>
+                  <Link className="dropdown-item fw-bold" to="/service">
+                    All Services
+                  </Link>
+                </li>
+
+                <li><hr className="dropdown-divider" /></li>
+
+                {/* Individual Services */}
                 <li>
                   <Link className="dropdown-item" to="/web-development">
                     Web Development
@@ -88,14 +94,11 @@ function Navbar() {
                 </li>
 
                 <li>
-                  <hr className="dropdown-divider" />
-                </li>
-
-                <li>
                   <Link className="dropdown-item" to="/cloud-solutions">
                     Cloud Solutions
                   </Link>
                 </li>
+
               </ul>
             </li>
 

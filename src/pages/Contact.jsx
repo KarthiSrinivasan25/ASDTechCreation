@@ -1,4 +1,5 @@
 import BreadCrumb from '../component/BreadCrumb'
+import Hero from '../component/Hero'
 import ContactForm from '../component/ContactForm'
 import Cta from '../component/Cta'
 import './Contact.css'
@@ -8,24 +9,9 @@ function Contact() {
 
             <BreadCrumb pageName="Contact" />
 
-            <section className="contact-hero">
-                <div className="container">
-                    <h1>
-                        Let's Create Something <br />
-                        <span
-                            style={{
-                                background: "linear-gradient(135deg, #4361ee, #4cc9f0)",
-                                WebkitBackgroundClip: "text",
-                                backgroundClip: "text",
-                                color: "transparent",
-                            }}
-                        >
-                            Extraordinary
-                        </span>
-                    </h1>
-                    <p>Have a project in mind? We'd love to hear from you. Fill out the form and we'll get back to you within 24 hours.</p>
-                </div>
-            </section>
+            <Hero HeroTitlePrefix="Let's Create Something" HeroTitleSuffix="Extraordinary" HeroDescription="Have a project in mind? We'd love to hear from you. Fill out the form and we'll get back to you within 24 hours."/>
+
+            
 
             <section className="contact-main">
                 <div className="container">
