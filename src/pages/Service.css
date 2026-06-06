@@ -70,7 +70,7 @@
       overflow: hidden;
     }
 
-    .usp-card::before {
+    /* .usp-card::before {
       content: '';
       position: absolute;
       top: 0;
@@ -85,11 +85,11 @@
 
     .usp-card:hover::before {
       transform: scaleX(1);
-    }
+    } */
 
     .usp-card:hover {
       transform: translateY(-6px);
-      border-color: rgba(67, 97, 238, 0.25);
+      border-color: #4361ee;
       box-shadow: 0 20px 35px -12px rgba(67, 97, 238, 0.15);
     }
 
@@ -139,80 +139,37 @@
     }
 
 
-    /* ========== SERVICES OVERVIEW ========== */
-    .services-overview {
-      padding: 80px 0;
-      background: linear-gradient(135deg, #f8fafc 0%, #ffffff 100%);
+    /* ========== FAQ ========== */
+    .faq {
+      padding: 60px 0;
+      background: #eef2ff;
     }
 
-    .service-card {
-      background: #ffffff;
-      border-radius: 28px;
-      padding: 2rem;
-      transition: all 0.3s ease;
-      border: 1px solid rgba(67, 97, 238, 0.08);
-      box-shadow: 0 10px 30px -12px rgba(0, 0, 0, 0.05);
-      height: 100%;
-      text-align: center;
+    .accordion-item {
+      border: 1px solid rgba(67, 97, 238, 0.1);
+      border-radius: 20px !important;
+      margin-bottom: 1rem;
+      overflow: hidden;
     }
 
-    .service-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(67, 97, 238, 0.2);
-      box-shadow: 0 24px 40px -12px rgba(67, 97, 238, 0.15);
-    }
-
-    .service-icon {
-      width: 70px;
-      height: 70px;
-      background: linear-gradient(135deg, rgba(67, 97, 238, 0.1), rgba(76, 201, 240, 0.08));
-      border-radius: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto 1.2rem;
-    }
-
-    .service-icon i {
-      font-size: 2rem;
-      background: linear-gradient(135deg, #4361ee, #4cc9f0);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .service-card h3 {
-      font-weight: 700;
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-      color: #1e293b;
-    }
-
-    .service-card p {
-      color: #64748b;
-      font-size: 0.85rem;
-      line-height: 1.5;
-      margin-bottom: 1.2rem;
-    }
-
-    .btn-learn-more {
-      background: transparent;
-      border: 1px solid #4361ee;
-      padding: 8px 20px;
-      border-radius: 60px;
-      color: #4361ee;
+    .accordion-button {
+      background: white;
       font-weight: 600;
-      font-size: 0.85rem;
-      transition: all 0.3s;
-      text-decoration: none;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
+      color: #1e293b;
+      padding: 1.2rem 1.5rem;
     }
 
-    .btn-learn-more:hover {
-      background: linear-gradient(95deg, #4361ee, #3a0ca3);
-      color: white;
-      border-color: transparent;
-      gap: 12px;
+    .accordion-button:focus {
+      box-shadow: none;
+      border-color: rgba(67, 97, 238, 0.2);
+    }
+
+    .accordion-button:not(.collapsed) {
+      background: linear-gradient(135deg, rgba(67, 97, 238, 0.05), rgba(76, 201, 240, 0.03));
+      color: #4361ee;
+    }
+
+    .accordion-body {
+      padding: 1.2rem 1.5rem;
+      color: #64748b;
     }

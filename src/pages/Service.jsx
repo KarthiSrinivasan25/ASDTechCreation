@@ -1,6 +1,10 @@
 import './Service.css'
 import BreadCrumb from "../component/BreadCrumb"
 import Hero from "../component/Hero"
+import PortfolioCard from '../component/PortfolioCard'
+import Testimonial from '../component/Testinomial'
+import OurWorkFlow from '../component/OurWorkFlow'
+import ServicesCards from '../component/ServicesCards'
 
 function Service() {
     return (
@@ -23,7 +27,7 @@ function Service() {
                         <p>With a commitment to <span className="theory-highlight">timely delivery, affordable pricing, and long-term support</span>, we strive to provide websites that not only look great but also perform effectively for your business. Whether you need a business website, e-commerce platform, or custom web solution, we aim to deliver results that create real value for your brand.</p>
                     </div>
 
-                 
+
                     <div className="usp-grid">
                         <div className="usp-card">
                             <div className="usp-icon"><i className="fas fa-rocket"></i></div>
@@ -59,23 +63,64 @@ function Service() {
                 </div>
             </section>
 
-            <section className="services-overview">
-    <div className="container">
-      <div className="text-center mb-5">
-        <span className="section-badge"><i className="fas fa-cogs me-1"></i> What We Offer</span>
-        <h2 className="section-title">Our Services</h2>
-        <p className="text-secondary">Comprehensive solutions for your digital success</p>
-      </div>
-      <div className="row g-4">
-        <div className="col-lg-4 col-md-6"><div className="service-card"><div className="service-icon"><i className="fas fa-paint-brush"></i></div><h3>Website Design</h3><p>Stunning, responsive designs that captivate your audience and drive engagement.</p><a href="#" className="btn-learn-more">Learn More <i className="fas fa-arrow-right"></i></a></div></div>
-        <div className="col-lg-4 col-md-6"><div className="service-card"><div className="service-icon"><i className="fas fa-code"></i></div><h3>Web Development</h3><p>Custom web applications built with modern frameworks like React, Node.js, and Laravel.</p><a href="#" className="btn-learn-more">Learn More <i className="fas fa-arrow-right"></i></a></div></div>
-        <div className="col-lg-4 col-md-6"><div className="service-card"><div className="service-icon"><i className="fas fa-shopping-cart"></i></div><h3>E-commerce</h3><p>Powerful online stores with secure payments, inventory management, and seamless UX.</p><a href="#" className="btn-learn-more">Learn More <i className="fas fa-arrow-right"></i></a></div></div>
-        <div className="col-lg-4 col-md-6"><div className="service-card"><div className="service-icon"><i className="fas fa-chart-line"></i></div><h3>SEO</h3><p>Boost your rankings with data-driven SEO strategies and optimization.</p><a href="#" className="btn-learn-more">Learn More <i className="fas fa-arrow-right"></i></a></div></div>
-        <div className="col-lg-4 col-md-6"><div className="service-card"><div className="service-icon"><i className="fas fa-mobile-alt"></i></div><h3>Mobile App Development</h3><p>Native and cross-platform mobile apps for iOS and Android.</p><a href="#" className="btn-learn-more">Learn More <i className="fas fa-arrow-right"></i></a></div></div>
-        <div className="col-lg-4 col-md-6"><div className="service-card"><div className="service-icon"><i className="fas fa-tools"></i></div><h3>Maintenance</h3><p>Ongoing support, updates, and optimization for peak performance.</p><a href="#" className="btn-learn-more">Learn More <i className="fas fa-arrow-right"></i></a></div></div>
-      </div>
-    </div>
-  </section>
+            <section className="services-preview">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-badge"><i className="fas fa-cogs me-1"></i> What We Offer</span>
+            <h2 className="section-title">Web & Mobile App Development Services</h2>
+            <p className="text-secondary">All-in-one web and mobile development for modern businesses.</p>
+          </div>
+          <div className="row g-4">
+            <ServicesCards />
+          </div>
+        </div>
+      </section>
+
+
+            <section className="portfolio-preview">
+                <div className="container">
+                    <div className="section-header">
+                        <span className="section-badge"><i className="fas fa-briefcase me-1"></i> Our Work</span>
+                        <h2 className="section-title">Featured Projects</h2>
+                        <p className="text-secondary">A glimpse of our finest work</p>
+                    </div>
+
+                    <div className="portfolio-grid-preview">
+                        <PortfolioCard limit={3} />
+                    </div>
+
+                    <div className="view-all-link">
+                        <a href="#" className="view-all-btn">View All Projects <i className="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </section>
+
+
+            <Testimonial />
+
+
+            <OurWorkFlow />
+
+
+            <section className="faq">
+                <div className="container">
+                    <div className="text-center mb-5">
+                        <span className="section-badge"><i className="fas fa-question-circle me-1"></i> FAQ</span>
+                        <h2 className="section-title">Frequently Asked Questions</h2>
+                        <p className="text-secondary">Got questions? We've got answers</p>
+                    </div>
+                    <div className="row justify-content-center">
+                        <div className="col-lg-8">
+                            <div className="accordion" id="faqAccordion">
+                                <div className="accordion-item"><h2 className="accordion-header"><button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">How long does it take to build a website?</button></h2><div id="faq1" className="accordion-collapse collapse show" data-bs-parent="#faqAccordion"><div className="accordion-body">Timeline varies based on project complexity. A typical website takes 4-8 weeks, while complex web applications may take 3-6 months.</div></div></div>
+                                <div className="accordion-item"><h2 className="accordion-header"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">Do you offer maintenance after launch?</button></h2><div id="faq2" className="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div className="accordion-body">Yes! We offer ongoing maintenance packages including updates, security patches, backups, and technical support.</div></div></div>
+                                <div className="accordion-item"><h2 className="accordion-header"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">What technologies do you use?</button></h2><div id="faq3" className="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div className="accordion-body">We use modern tech stacks including React, Node.js, Python, Laravel, Flutter, and cloud platforms like AWS.</div></div></div>
+                                <div className="accordion-item"><h2 className="accordion-header"><button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">Will my website be mobile-friendly?</button></h2><div id="faq4" className="accordion-collapse collapse" data-bs-parent="#faqAccordion"><div className="accordion-body">Absolutely! All our websites are fully responsive and optimized for all devices including mobile, tablet, and desktop.</div></div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
         </>
 

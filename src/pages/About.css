@@ -427,7 +427,7 @@
 
     .value-card:hover {
       transform: translateY(-5px);
-      border-color: rgba(67, 97, 238, 0.2);
+      border-color: #4361ee;
       box-shadow: 0 15px 30px -10px rgba(67, 97, 238, 0.1);
     }
 

@@ -7,7 +7,8 @@ import Service from "./pages/Service"
 import Career from "./pages/Career";
 import Contact from "./pages/Contact"
 import Footer from "./component/Footer"
-
+import AnniversaryWidget from "./component/AnniversaryWidget";
+import AnniversaryPopup from "./component/AnniversaryPopup"
 
 
 function App() {
@@ -24,7 +25,8 @@ function App() {
         <Route path="/career" element={<Career />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
-
+<AnniversaryWidget />
+<AnniversaryPopup />
       <Footer />
     </BrowserRouter>
     

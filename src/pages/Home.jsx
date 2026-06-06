@@ -1,245 +1,212 @@
 import './home.css';
+import StatsCompact from '../component/StatsCompact';
 import Testinomial from '../component/Testinomial'
 import Cta from '../component/Cta';
 import ClientBrand from '../component/ClientBrand';
+import TechnologiesSection from '../component/TechnologiesSection';
+import PortfolioCard from '../component/PortfolioCard';
+import OurWorkFlow from '../component/OurWorkFlow';
+import ServicesCards from '../component/ServicesCards';
+import { Link } from "react-router-dom";
+
 
 function Home() {
-    return (
-        <>
-        <section>
+  return (
+    <>
+      <section>
 
-       
+
         <div className="hero-carousel">
-            <div id="heroCarousel" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-                <div className="carousel-indicators">
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                </div>
-                <div className="carousel-inner">
-
-                    <div
-                        className="carousel-item active"
-                        style={{
-                            backgroundImage:
-                                "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('/home1.png')"
-                        }}
-                    >
-                        <div className="carousel-caption p-5">
-                            <h1>Innovative Web Solutions</h1>
-                            <p>
-                                Custom web applications, enterprise platforms, and scalable digital ecosystems built with modern frameworks.
-                            </p>
-
-                            <a href="#" className="carousel-btn">
-                                Explore Services <i className="fas fa-arrow-right ms-2"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div className="carousel-item" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('/home2.png')" }}>
-                        <div className="carousel-caption p-5">
-                            <h1>Mobile App Development</h1>
-                            <p>We build high-performance Android and iOS apps with intuitive UI, seamless UX, and scalable architecture.</p>
-                            <a href="#" className="carousel-btn">Explore Apps <i className="fas fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-
-                    <div className="carousel-item" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('/home3.png')" }}>
-                        <div className="carousel-caption">
-                            <h1>SEO & Digital Growth Solutions</h1>
-                            <p>Boost your website ranking with on-page SEO, technical SEO, content optimization, and data-driven digital marketing strategies.</p>
-                            <a href="#" className="carousel-btn">Improve Ranking <i className="fas fa-arrow-right ms-2"></i></a>
-                        </div>
-                    </div>
-
-                </div>
-                <button className="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Previous</span>
-                </button>
-                <button className="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span className="visually-hidden">Next</span>
-                </button>
+          <div id="heroCarousel" className="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
+            <div className="carousel-indicators">
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
             </div>
-        </div>
+            <div className="carousel-inner">
 
- </section>
+              <div
+                className="carousel-item active"
+                style={{
+                  backgroundImage:
+                    "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('/home1.png')"
+                }}
+              >
+                <div className="carousel-caption p-5">
+                  <h1>Innovative Web Solutions</h1>
+                  <p>
+                    Custom web applications, enterprise platforms, and scalable digital ecosystems built with modern frameworks.
+                  </p>
 
+                  <a href="#" className="carousel-btn">
+                    Explore Services <i className="fas fa-arrow-right ms-2"></i>
+                  </a>
+                </div>
+              </div>
 
- <section className="about-advanced">
-  <div className="container">
-    <div className="row align-items-center g-5">
-      <div className="col-lg-6">
-        <span className="about-badge"><i className="fas fa-code me-1"></i> About Us</span>
-        <h1 className="about-title">We build websites & apps that deliver real business results.</h1>
-        <p className="about-description">ASD Tech Creation is a leading web development company specializing in custom websites, web applications, and e-commerce solutions. We combine cutting-edge technology with user-centered design to create digital experiences that perform.</p>
+              <div className="carousel-item" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('/home2.png')" }}>
+                <div className="carousel-caption p-5">
+                  <h1>Mobile App Development</h1>
+                  <p>We build high-performance Android and iOS apps with intuitive UI, seamless UX, and scalable architecture.</p>
+                  <a href="#" className="carousel-btn">Explore Apps <i className="fas fa-arrow-right ms-2"></i></a>
+                </div>
+              </div>
 
-        <p className="about-description">With over 8 years of experience and 200+ successful projects, we've helped businesses of all sizes establish a powerful online presence. From startups to enterprises, our tailored web solutions deliver measurable growth.</p>
-        
-      
+              <div className="carousel-item" style={{ backgroundImage: "linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.3)), url('/home3.png')" }}>
+                <div className="carousel-caption">
+                  <h1>SEO & Digital Growth Solutions</h1>
+                  <p>Boost your website ranking with on-page SEO, technical SEO, content optimization, and data-driven digital marketing strategies.</p>
+                  <a href="#" className="carousel-btn">Improve Ranking <i className="fas fa-arrow-right ms-2"></i></a>
+                </div>
+              </div>
 
-        <div className="mt-3">
-            <div className="culture-tag"><i className="fas fa-code"></i> Full-Stack Development</div>
-            <div className="culture-tag"><i className="fab fa-android"></i> Android App Development</div>
-            <div className="culture-tag"><i className="fas fa-shield-alt"></i> Security-Focused</div>
-            <div className="culture-tag"><i className="fas fa-mobile-alt"></i> Responsive Design</div>
-        </div>
-      </div>
-      
-      <div className="col-lg-6">
-        <div className="about-image-wrapper">
-          <img src="./about.png" alt="Web development team" className="img-fluid" />
-          <div className="image-gradient-overlay"></div>
-          <div className="image-floating-badge">
-            <i className="fas fa-chart-line"></i> 10+ Websites & Apps Delivered
+            </div>
+            <button className="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+              <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span className="visually-hidden">Previous</span>
+            </button>
+            <button className="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+              <span className="carousel-control-next-icon" aria-hidden="true"></span>
+              <span className="visually-hidden">Next</span>
+            </button>
           </div>
-          <div className="image-decorative-icon">
-            <i className="fas fa-laptop-code"></i>
+        </div>
+
+      </section>
+
+
+      <section className="about-advanced">
+        <div className="container">
+          <div className="row align-items-center g-5">
+            <div className="col-lg-6">
+              <span className="about-badge"><i className="fas fa-code me-1"></i> About Us</span>
+              <h1 className="about-title">We build websites & apps that deliver real business results.</h1>
+              <p className="about-description">ASD Tech Creation is a leading web development company specializing in custom websites, web applications, and e-commerce solutions. We combine cutting-edge technology with user-centered design to create digital experiences that perform.</p>
+
+              <p className="about-description">With over 1 years of experience and 4 successful projects, we've helped businesses of all sizes establish a powerful online presence. From startups to enterprises, our tailored web solutions deliver measurable growth.</p>
+
+
+
+              <div className="mt-3">
+                <div className="culture-tag"><i className="fas fa-code"></i> Full-Stack Development</div>
+                <div className="culture-tag"><i className="fab fa-android"></i> Android App Development</div>
+                <div className="culture-tag"><i className="fas fa-shield-alt"></i> Security-Focused</div>
+                <div className="culture-tag"><i className="fas fa-mobile-alt"></i> Responsive Design</div>
+              </div>
+            </div>
+
+            <div className="col-lg-6">
+              <div className="about-image-wrapper">
+                <img src="./about.png" alt="Web development team" className="img-fluid" />
+                <div className="image-gradient-overlay"></div>
+                <div className="image-floating-badge">
+                  <i className="fas fa-chart-line"></i> 4 Websites & Apps Delivered
+                </div>
+                <div className="image-decorative-icon">
+                  <i className="fas fa-laptop-code"></i>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
-<section className="services-preview">
-  <div className="container">
-    <div className="section-header">
-      <span className="section-badge"><i className="fas fa-cogs me-1"></i> What We Offer</span>
-      <h2 className="section-title">Web Development Services</h2>
-      <p className="text-secondary">End-to-end web solutions tailored to your business needs</p>
-    </div>
-    <div className="row g-4">
-      {/* <!-- Service 1 --> */}
-      <div className="col-lg-4 col-md-6">
-        <div className="service-card">
-          <div className="service-icon"><i className="fas fa-globe"></i></div>
-          <h4>Custom Website Development</h4>
-          <p>Bespoke websites built with modern frameworks like React, Next.js, and Laravel for optimal performance and scalability.</p>
-          <a href="#" className="service-link">Learn More <i className="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-      {/* <!-- Service 2 --> */}
-      <div className="col-lg-4 col-md-6">
-        <div className="service-card">
-          <div className="service-icon"><i className="fas fa-shopping-cart"></i></div>
-          <h4>E-Commerce Solutions</h4>
-          <p>Powerful online stores with Shopify, WooCommerce, or custom carts — secure payments, inventory, and seamless UX.</p>
-          <a href="#" className="service-link">Learn More <i className="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-      {/* <!-- Service 3 --> */}
-      <div className="col-lg-4 col-md-6">
-        <div className="service-card">
-          <div className="service-icon"><i className="fas fa-mobile-alt"></i></div>
-          <h4>Responsive Web Design</h4>
-          <p>Mobile-first designs that look stunning on all devices, improving user engagement and conversion rates.</p>
-          <a href="#" className="service-link">Learn More <i className="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-      {/* <!-- Service 4 --> */}
-      <div className="col-lg-4 col-md-6">
-        <div className="service-card">
-          <div className="service-icon"><i className="fas fa-database"></i></div>
-          <h4>Web Application Development</h4>
-          <p>Custom web apps, dashboards, and SaaS platforms with robust backend architecture and real-time features.</p>
-          <a href="#" className="service-link">Learn More <i className="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-      {/* <!-- Service 5 --> */}
-      <div className="col-lg-4 col-md-6">
-        <div className="service-card">
-          <div className="service-icon"><i className="fas fa-wordpress"></i></div>
-          <h4>CMS Development</h4>
-          <p>Easy-to-manage websites with WordPress, Webflow, or custom CMS — empowering your content team.</p>
-          <a href="#" className="service-link">Learn More <i className="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-      {/* <!-- Service 6 --> */}
-      <div className="col-lg-4 col-md-6">
-        <div className="service-card">
-          <div className="service-icon"><i className="fas fa-chart-line"></i></div>
-          <h4>SEO & Performance Optimization</h4>
-          <p>Lightning-fast load times, Core Web Vitals, and SEO-friendly code to rank higher on search engines.</p>
-          <a href="#" className="service-link">Learn More <i className="fas fa-arrow-right"></i></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 
-<section className="why-choose-white">
-  <div className="container">
-    <div className="section-header">
-      <span className="section-badge"><i className="fas fa-gem me-1"></i> Why Choose Us</span>
-      <h2 className="section-title">The ASDTech Creation Advantage</h2>
-      <p className="text-secondary">We combine technical excellence with a client-first approach</p>
-    </div>
-    <div className="row g-4">
-      <div className="col-lg-4 col-md-6">
-        <div className="white-choose-card">
-          <div className="choose-icon-white"><i className="fas fa-bolt"></i></div>
-          <h4>Lightning Fast Performance</h4>
-          <p>We optimize every line of code for speed, ensuring your website loads in under 2 seconds for better UX and SEO.</p>
-          <span className="choose-highlight-white"><i className="fas fa-chart-line"></i> 40% faster load times</span>
-          <div className="choose-number-white">01</div>
+      {/* Our services */}
+      <section className="services-preview">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-badge"><i className="fas fa-cogs me-1"></i> What We Offer</span>
+            <h2 className="section-title">Our Services</h2>
+            <p className="text-secondary">End-to-end web solutions tailored to your business needs</p>
+          </div>
+          <div className="row g-4">
+            <ServicesCards limit={3} />
+          </div>
+
+          <div className="text-center mt-5">
+            <Link to="/service" className="explore-services-btn">
+              Explore All Services
+              <i className="fas fa-arrow-right ms-2"></i>
+            </Link>
+          </div>
         </div>
-      </div>
-      <div className="col-lg-4 col-md-6">
-        <div className="white-choose-card">
-          <div className="choose-icon-white"><i className="fas fa-headset"></i></div>
-          <h4>24/7 Priority Support</h4>
-          <p>Round-the-clock assistance from our expert team — we're always here to help with any technical needs or updates.</p>
-          <span className="choose-highlight-white"><i className="fas fa-clock"></i> 15 min response time</span>
-          <div className="choose-number-white">02</div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-md-6">
-        <div className="white-choose-card">
-          <div className="choose-icon-white"><i className="fas fa-code-branch"></i></div>
-          <h4>Clean & Scalable Code</h4>
-          <p>Maintainable, well-documented code that grows with your business, making future updates and scaling effortless.</p>
-          <span className="choose-highlight-white"><i className="fas fa-check-circle"></i> 100% commented code</span>
-          <div className="choose-number-white">03</div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-md-6">
-        <div className="white-choose-card">
-          <div className="choose-icon-white"><i className="fas fa-search"></i></div>
-          <h4>SEO-Optimized Development</h4>
-          <p>Built with SEO best practices from the ground up, helping you rank higher and attract more organic traffic.</p>
-          <span className="choose-highlight-white"><i className="fas fa-chart-simple"></i> 3x more traffic</span>
-          <div className="choose-number-white">04</div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-md-6">
-        <div className="white-choose-card">
-          <div className="choose-icon-white"><i className="fas fa-shield-alt"></i></div>
-          <h4>Enterprise Security</h4>
-          <p>Robust security measures including SSL, data encryption, regular audits, and DDoS protection for your peace of mind.</p>
-          <span className="choose-highlight-white"><i className="fas fa-lock"></i> ISO 27001 certified</span>
-          <div className="choose-number-white">05</div>
-        </div>
-      </div>
-      <div className="col-lg-4 col-md-6">
-        <div className="white-choose-card">
-          <div className="choose-icon-white"><i className="fas fa-handshake"></i></div>
-          <h4>Transparent Process</h4>
-          <p>Regular updates, clear timelines, and open dialogue — we keep you informed at every stage of development.</p>
-          <span className="choose-highlight-white"><i className="fas fa-chart-line"></i> Weekly progress reports</span>
-          <div className="choose-number-white">06</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
-<section className="stats-compact">
+      <section className="why-choose-white">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-badge"><i className="fas fa-gem me-1"></i> Why Choose Us</span>
+            <h2 className="section-title">The ASDTech Creation Advantage</h2>
+            <p className="text-secondary">We combine technical excellence with a client-first approach</p>
+          </div>
+          <div className="row g-4">
+            <div className="col-lg-4 col-md-6">
+              <div className="white-choose-card">
+                <div className="choose-icon-white"><i className="fas fa-bolt"></i></div>
+                <h4>Lightning Fast Performance</h4>
+                <p>We optimize every line of code for speed, ensuring your website loads in under 2 seconds for better UX and SEO.</p>
+                <span className="choose-highlight-white"><i className="fas fa-chart-line"></i> 40% faster load times</span>
+                <div className="choose-number-white">01</div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="white-choose-card">
+                <div className="choose-icon-white"><i className="fas fa-headset"></i></div>
+                <h4>24/7 Priority Support</h4>
+                <p>Round-the-clock assistance from our expert team — we're always here to help with any technical needs or updates.</p>
+                <span className="choose-highlight-white"><i className="fas fa-clock"></i> 15 min response time</span>
+                <div className="choose-number-white">02</div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="white-choose-card">
+                <div className="choose-icon-white"><i className="fas fa-code-branch"></i></div>
+                <h4>Clean & Scalable Code</h4>
+                <p>Maintainable, well-documented code that grows with your business, making future updates and scaling effortless.</p>
+                <span className="choose-highlight-white"><i className="fas fa-check-circle"></i> 100% commented code</span>
+                <div className="choose-number-white">03</div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="white-choose-card">
+                <div className="choose-icon-white"><i className="fas fa-search"></i></div>
+                <h4>SEO-Optimized Development</h4>
+                <p>Built with SEO best practices from the ground up, helping you rank higher and attract more organic traffic.</p>
+                <span className="choose-highlight-white"><i className="fas fa-chart-simple"></i> 3x more traffic</span>
+                <div className="choose-number-white">04</div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="white-choose-card">
+                <div className="choose-icon-white"><i className="fas fa-shield-alt"></i></div>
+                <h4>Enterprise Security</h4>
+                <p>Robust security measures including SSL, data encryption, regular audits, and DDoS protection for your peace of mind.</p>
+                <span className="choose-highlight-white"><i className="fas fa-lock"></i> ISO 27001 certified</span>
+                <div className="choose-number-white">05</div>
+              </div>
+            </div>
+            <div className="col-lg-4 col-md-6">
+              <div className="white-choose-card">
+                <div className="choose-icon-white"><i className="fas fa-handshake"></i></div>
+                <h4>Transparent Process</h4>
+                <p>Regular updates, clear timelines, and open dialogue — we keep you informed at every stage of development.</p>
+                <span className="choose-highlight-white"><i className="fas fa-chart-line"></i> Weekly progress reports</span>
+                <div className="choose-number-white">06</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <StatsCompact />
+
+      {/* <section className="stats-compact">
     <div className="container">
       <div className="row g-3">
         <div className="col-lg-3 col-md-6">
@@ -284,72 +251,34 @@ function Home() {
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
 
 
 
-  <section className="portfolio-preview">
-    <div className="container">
-      <div className="section-header">
-        <span className="section-badge"><i className="fas fa-briefcase me-1"></i> Our Work</span>
-        <h2 className="section-title">Featured Projects</h2>
-        <p className="text-secondary">A glimpse of our finest work</p>
-      </div>
-
-      <div className="portfolio-grid-preview">
-
-        <div className="portfolio-preview-card">
-          <div className="portfolio-preview-img">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop" alt="Fintech Dashboard" />
-            <div className="portfolio-preview-overlay">
-              <a href="#"><i className="fas fa-eye"></i></a>
-            </div>
+      <section className="portfolio-preview">
+        <div className="container">
+          <div className="section-header">
+            <span className="section-badge"><i className="fas fa-briefcase me-1"></i> Our Work</span>
+            <h2 className="section-title">Featured Projects</h2>
+            <p className="text-secondary">A glimpse of our finest work</p>
           </div>
-          <div className="portfolio-preview-info">
-            <h4>FinTech Analytics Platform</h4>
-            <p>Interactive dashboard with real-time data visualization</p>
-            <span className="portfolio-preview-cat">Web Development</span>
+
+
+
+          <div className="portfolio-grid-preview">
+            <PortfolioCard limit={3} />
+          </div>
+
+          <div className="view-all-link">
+            <a href="#" className="view-all-btn">View All Projects <i className="fas fa-arrow-right"></i></a>
           </div>
         </div>
+      </section>
 
-        <div className="portfolio-preview-card">
-          <div className="portfolio-preview-img">
-            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop" alt="Eco Store" />
-            <div className="portfolio-preview-overlay">
-              <a href="#"><i className="fas fa-eye"></i></a>
-            </div>
-          </div>
-          <div className="portfolio-preview-info">
-            <h4>EcoStore Marketplace</h4>
-            <p>Sustainable products e-commerce with seamless checkout</p>
-            <span className="portfolio-preview-cat">E-Commerce</span>
-          </div>
-        </div>
-
-        <div className="portfolio-preview-card">
-          <div className="portfolio-preview-img">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop" alt="Project Management" />
-            <div className="portfolio-preview-overlay">
-              <a href="#"><i className="fas fa-eye"></i></a>
-            </div>
-          </div>
-          <div className="portfolio-preview-info">
-            <h4>TaskFlow Project Manager</h4>
-            <p>Team collaboration tool with real-time updates</p>
-            <span className="portfolio-preview-cat">Web App</span>
-          </div>
-        </div>
-      </div>
-
-      <div className="view-all-link">
-        <a href="#" className="view-all-btn">View All Projects <i className="fas fa-arrow-right"></i></a>
-      </div>
-    </div>
-  </section>
+      <TechnologiesSection />
 
 
-
-  <section className="tech-futuristic">
+      {/* <section className="tech-futuristic">
     <div className="animated-bg"></div>
     <div className="particle-field" id="particleField"></div>
     <div className="floating-orb orb-1"></div>
@@ -393,106 +322,24 @@ function Home() {
         </div>
       </div>
     </div>
-  </section>
+  </section> */}
 
-        
-
-
-<section className="process-ultra">
-    <div className="container">
-      <div className="section-header">
-        <span className="section-badge"><i className="fas fa-chart-line me-1"></i> Our Workflow</span>
-        <h2 className="section-title">Our Process</h2>
-      </div>
-
-      <div className="steps-ultra">
-       
-        <div className="step-ultra-item">
-          <div className="step-ultra-circle">
-            <span className="step-number-ultra">01</span>
-            <span className="step-icon-ultra"><i className="fas fa-comments"></i></span>
-          </div>
-          <div className="step-title-ultra">Discover</div>
-          <div className="step-desc-ultra">Requirements & goals</div>
-          <div className="step-glow-dot"></div>
-        </div>
-       
-        <div className="step-ultra-item">
-          <div className="step-ultra-circle">
-            <span className="step-number-ultra">02</span>
-            <span className="step-icon-ultra"><i className="fas fa-pencil-ruler"></i></span>
-          </div>
-          <div className="step-title-ultra">Plan</div>
-          <div className="step-desc-ultra">Strategy & wireframes</div>
-          <div className="step-glow-dot"></div>
-        </div>
-
-        <div className="step-ultra-item">
-          <div className="step-ultra-circle">
-            <span className="step-number-ultra">03</span>
-            <span className="step-icon-ultra"><i className="fas fa-paint-brush"></i></span>
-          </div>
-          <div className="step-title-ultra">Design</div>
-          <div className="step-desc-ultra">UI/UX & visuals</div>
-          <div className="step-glow-dot"></div>
-        </div>
-
-        <div className="step-ultra-item">
-          <div className="step-ultra-circle">
-            <span className="step-number-ultra">04</span>
-            <span className="step-icon-ultra"><i className="fas fa-code"></i></span>
-          </div>
-          <div className="step-title-ultra">Develop</div>
-          <div className="step-desc-ultra">Agile coding</div>
-          <div className="step-glow-dot"></div>
-        </div>
-
-        <div className="step-ultra-item">
-          <div className="step-ultra-circle">
-            <span className="step-number-ultra">05</span>
-            <span className="step-icon-ultra"><i className="fas fa-check-double"></i></span>
-          </div>
-          <div className="step-title-ultra">Test</div>
-          <div className="step-desc-ultra">QA & optimization</div>
-          <div className="step-glow-dot"></div>
-        </div>
-
-        <div className="step-ultra-item">
-          <div className="step-ultra-circle">
-            <span className="step-number-ultra">06</span>
-            <span className="step-icon-ultra"><i className="fas fa-rocket"></i></span>
-          </div>
-          <div className="step-title-ultra">Launch</div>
-          <div className="step-desc-ultra">Deployment</div>
-          <div className="step-glow-dot"></div>
-        </div>
-
-        <div className="step-ultra-item">
-          <div className="step-ultra-circle">
-            <span className="step-number-ultra">07</span>
-            <span className="step-icon-ultra"><i className="fas fa-headset"></i></span>
-          </div>
-          <div className="step-title-ultra">Support</div>
-          <div className="step-desc-ultra">24/7 maintenance</div>
-          <div className="step-glow-dot"></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <Testinomial />
+      <OurWorkFlow />
 
 
-  <Cta badgeTitle="Limited Time Offer" prefix="Ready to" highlight="Transform" suffix="Your Business?"  
-            description="Join 500+ successful businesses. Get a free consultation and quote today!"
-            button1="Start Project" button2="Free Consultation" 
-            trust1="No upfront payment" trust2="100% Satisfaction" trust3="24/7 Support" />
-            
+      <Testinomial />
 
-  <ClientBrand />
 
-        </>
-    )
+      <Cta badgeTitle="Limited Time Offer" prefix="Ready to" highlight="Transform" suffix="Your Business?"
+        description="Join 500+ successful businesses. Get a free consultation and quote today!"
+        button1="Start Project" button2="Free Consultation"
+        trust1="No upfront payment" trust2="100% Satisfaction" trust3="24/7 Support" />
+
+
+      <ClientBrand />
+
+    </>
+  )
 }
 
 export default Home
