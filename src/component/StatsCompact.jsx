@@ -66,7 +66,7 @@ const StatsCompact = () => {
   const stats = [
     {
       icon: "fas fa-code",
-      target: 487,
+      target: 4,
       suffix: "+",
       label: "Projects Delivered",
     },
@@ -78,20 +78,20 @@ const StatsCompact = () => {
     },
     {
       icon: "fas fa-globe",
-      target: 52,
+      target: 1,
       suffix: "+",
       label: "Countries Served",
     },
     {
       icon: "fas fa-trophy",
-      target: 18,
+      target: 5,
       suffix: "+",
       label: "Industry Awards",
     },
   ];
 
   return (
-    <section className="stats-compact">
+    <section className="stats-compact" style={{backgroundImage: "linear-gradient(rgba(31, 40, 62, 0.189), rgba(47, 57, 84, 0.452)), url('./stats.png')"}}>
       <div className="container">
         <div className="row g-3">
           {stats.map((stat, index) => (

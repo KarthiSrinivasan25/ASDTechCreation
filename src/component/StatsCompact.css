@@ -1,5 +1,5 @@
 .stats-compact {
-  background: linear-gradient(rgba(31, 40, 62, 0.189), rgba(47, 57, 84, 0.452)), url('./stats.png');
+  /* background: linear-gradient(rgba(31, 40, 62, 0.189), rgba(47, 57, 84, 0.452)), url('./stats.png'); */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
