@@ -50,11 +50,11 @@ function Contact() {
 
                                 <div className="stats-row-premium">
                                     <div className="stat-item-premium">
-                                        <div className="stat-number-premium">250+</div>
+                                        <div className="stat-number-premium">4+</div>
                                         <div className="stat-label-premium">Projects</div>
                                     </div>
                                     <div className="stat-item-premium">
-                                        <div className="stat-number-premium">98%</div>
+                                        <div className="stat-number-premium">99%</div>
                                         <div className="stat-label-premium">Satisfaction</div>
                                     </div>
                                     <div className="stat-item-premium">
